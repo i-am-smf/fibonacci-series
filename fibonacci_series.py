@@ -8,25 +8,6 @@ class fibonocci:
         self.l2 = []
         self.n3 = 0
 
-    def check(self,sv,ev):
-        self.n1,self.n2=sv,ev
-        if self.n1 > self.n2:
-            self.n3=self.n1
-            self.n1=self.n2
-            self.n2=self.n3
-        elif self.n1==self.n2:
-            a="Invalid Inputs"
-            return a
-
-        if self.n1==0:
-            self.l2.append(self.n1)
-            self.l2.append(1)
-            self.n1=1
-            self.n3=1
-
-        if self.n1==1:
-            self.n3=1
-
     def fib1(self,r):
         self.n1,self.n3=1,1
         self.l1.append(1)
@@ -38,7 +19,6 @@ class fibonocci:
             self.n1=n6
 
         ans=self.l1
-
         return ans
 
     def fib2(self,sv,ev):
@@ -75,6 +55,7 @@ class fibonocci:
 
 
 f=fibonocci()
+
 print(f.fib1(10))
 
 print(f.fib2(10,1))
